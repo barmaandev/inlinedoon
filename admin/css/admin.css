@@ -1,0 +1,710 @@
+/**
+ * Plugin Name Admin Styles
+ * These styles only apply to WordPress admin dashboard
+ */
+
+/* Scope all styles to WordPress admin body class */
+.wbdn-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.wbdn-wrapper p,
+.wbdn-wrapper h1,
+.wbdn-wrapper h2,
+.wbdn-wrapper h3,
+.wbdn-wrapper h4,
+.wbdn-wrapper h5,
+.wbdn-wrapper h6,
+.wbdn-wrapper span,
+.wbdn-wrapper a,
+.wbdn-wrapper p,
+.wbdn-wrapper a,
+.wbdn-wrapper button,
+.wbdn-wrapper input,
+.wbdn-wrapper textarea,
+.wbdn-wrapper select,
+.wbdn-wrapper option,
+.wbdn-wrapper label,
+.wbdn-wrapper th,
+.wbdn-wrapper td,
+.wbdn-wrapper tr,
+.wbdn-wrapper tbody,
+.wbdn-wrapper thead,
+.wbdn-wrapper tfoot,
+.wbdn-wrapper table,
+.wbdn-wrapper form,
+.wbdn-wrapper div,
+.wbdn-wrapper input[type="text"],
+.wbdn-wrapper input[type="password"],
+.wbdn-wrapper input[type="email"],
+.wbdn-wrapper input[type="number"] {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.dashicons,
+.dashicons-before:before {
+    font-family: dashicons !important;
+}
+
+.normal-label {
+    font-weight: 600;
+    color: #606060;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px;
+    max-width: 20px !important;
+    max-height: 20px;
+}
+
+/* Card Layouts */
+.wbdn-wrapper .wbdn-section-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 6px 6px 54px rgba(0, 0, 0, .05);
+}
+
+/* Tab Navigation */
+
+/* Headers */
+.wbdn-wrapper h1,
+.wbdn-wrapper h2 {
+    color: #202224;
+    font-size: 24px;
+}
+
+.wbdn-wrapper h1 {
+    margin-bottom: 30px;
+}
+
+
+.wbdn-tab-wrapper,
+.wrap h2.wbdn-tab-wrapper,
+h1.wbdn-tab-wrapper {
+    border: 0;
+}
+
+/* Card Layouts */
+
+.wbdn-wrapper .wbdn-tab-wrapper {
+    padding: 5px !important;
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 20px !important;
+    box-shadow: 6px 6px 54px rgba(0, 0, 0, .05);
+}
+
+
+.wbdn-wrapper .wbdn-tab-nav-btn {
+    display: inline-flex;
+    border: 0;
+    border-bottom: none;
+    margin-right: .5em;
+    padding: 15px 30px;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 600;
+    background: transparent;
+    color: #50575e;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 15px;
+    border-bottom: 0;
+
+}
+
+.wbdn-wrapper .wbdn-tab-nav-btn:hover:not(.active) {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.wbdn-wrapper .wbdn-tab-nav-btn.active,
+.wbdn-wrapper .wbdn-tab-nav-btn.active:focus,
+.wbdn-wrapper .wbdn-tab-nav-btn.active:focus:active,
+.wbdn-wrapper .wbdn-tab-nav-btn.active:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Tab Navigation */
+
+.wbdn-tab-nav-btn {
+    padding: 12px 24px;
+    background: #f8f9fa;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-left: 5px;
+    border-radius: 8px 8px 0 0;
+}
+
+.wbdn-tab-nav-btn:hover:not(.active) {
+    background: #e9ecef !important;
+    color: #333;
+}
+
+.btn {
+    border: 0 !important;
+    outline: 0 !important;
+    display: inline-flex !important;
+    padding: 15px 30px;
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: nowrap;
+    border-radius: 15px;
+    border-bottom: 0;
+    cursor: pointer;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.gray-btn-04 {
+    background: #CDCDCD !important;
+    color: #000 !important;
+}
+
+.gray-btn-04:hover {
+    background: #B2B2B2 !important;
+    color: #000 !important;
+}
+
+.blue-btn {
+    background: #277AFF !important;
+    color: #fff !important;
+}
+
+.blue-btn:hover {
+    background: #1F66CC !important;
+    color: #fff !important;
+}
+
+.red-btn {
+    background: #EA0234 !important;
+    color: #fff !important;
+}
+
+.red-btn:hover {
+    background: #c2022b !important;
+    color: #fff !important;
+}
+
+.green-btn {
+    background: #31C74E !important;
+    color: #000 !important;
+}
+
+.green-btn:hover {
+    background: #28A745 !important;
+    color: #fff !important;
+}
+
+/* Tab Content */
+.wbdn-tab-content {
+    display: none;
+}
+
+.wbdn-tab-content.active {
+    display: block;
+}
+
+/* Table Container */
+.wbdn-wrapper .table-container {
+    overflow: hidden;
+}
+
+.wbdn-wrapper table {
+    margin: 0;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    background: transparent;
+}
+
+
+.wbdn-wrapper table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #D5D5D5;
+    vertical-align: middle;
+    background: #fff;
+}
+
+
+.wbdn-wrapper table tbody tr:last-child td:first-child {
+    border-radius: 0 0 15px 0;
+    overflow: hidden;
+}
+
+.wbdn-wrapper table tbody tr:last-child td:last-child {
+    border-radius: 0 0 0 15px;
+    overflow: hidden;
+}
+
+
+/* Pagination */
+.wbdn-wrapper .tablenav-pages {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.wbdn-wrapper .pagination-links {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.wbdn-wrapper .pagination-links a,
+.wbdn-wrapper .pagination-links span {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #0073aa;
+    transition: all 0.3s ease;
+}
+
+.wbdn-wrapper .pagination-links a:hover {
+    background: #f8f9fa;
+    border-color: #0073aa;
+}
+
+.wbdn-wrapper .pagination-links .current {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+/* Modal */
+.wbdn-wrapper .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.wbdn-wrapper .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wbdn-wrapper .close {
+    color: #aaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.wbdn-wrapper .close:hover,
+.wbdn-wrapper .close:focus {
+    color: #000;
+}
+
+.wbdn-wrapper .modal h2 {
+    margin: 0 0 20px 0;
+    color: #23282d;
+    text-align: center;
+}
+
+
+/* Loading States */
+.wbdn-wrapper .loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.wbdn-wrapper .loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Success/Error Messages */
+.wbdn-wrapper .notice {
+    padding: 20px 15px;
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+.wbdn-wrapper .notice-success {
+    background: #13CE66;
+    border: 0;
+    color: #fff;
+}
+
+.wbdn-wrapper .notice-error {
+    background: #FF4949;
+    border: 0;
+    color: #fff;
+}
+
+.wbdn-wrapper .notice-warning {
+    background: #FFCC3D;
+    border: 0;
+    color: #000;
+}
+
+.wbdn-wrapper .notice-info {
+    background: #d1ecf1;
+    border: 0;
+    color: #0c5460;
+}
+
+.wbdn-wrapper .notice-dismiss {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    border: none;
+    margin: 0;
+    padding: 9px;
+    background: 0 0;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.wbdn-wrapper #bulk-titles .ntdelbutton:before,
+.wbdn-wrapper .notice-dismiss:before,
+.wbdn-wrapper .tagchecklist .ntdelbutton .remove-tag-icon:before,
+.wbdn-wrapper .welcome-panel .welcome-panel-close:before {
+    color: #fff;
+    font: normal 20px / 30px dashicons;
+    width: 30px;
+    height: 30px;
+}
+
+.wbdn-wrapper .notice-dismiss:active,
+.wbdn-wrapper .notice-dismiss:focus,
+.wbdn-wrapper .notice-dismiss:hover {
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Enhanced Table Styling */
+.wbdn-wrapper tbody tr {
+    transition: all 0.2s ease;
+}
+
+.wbdn-wrapper tbody tr:hover {
+    background: #f8f9fa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wbdn-wrapper th {
+    font-weight: 600;
+    color: #202224;
+    background: #FCFDFD;
+    border-top: 0.8px solid #D5D5D5;
+    border-bottom: 0.8px solid #D5D5D5;
+    position: sticky;
+    top: 0;
+    padding: 15px 12px;
+    z-index: 10;
+}
+
+.wbdn-wrapper th:first-child {
+    border-radius: 0 15px 0 0;
+}
+
+.wbdn-wrapper th:last-child {
+    border-radius: 15px 0 0 0;
+}
+
+
+
+
+/* Enhanced Table Responsiveness */
+@media (max-width: 1024px) {
+    .wbdn-wrapper .table-container {
+        overflow-x: auto;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wbdn-wrapper .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {}
+
+/* WordPress Admin Integration */
+.wbdn-wrapper .wp-list-table .widefat {
+    border: none;
+}
+
+.wbdn-wrapper .wp-list-table .widefat th {
+    border-top: none;
+}
+
+.wbdn-wrapper .wp-list-table .widefat td {
+    border-top: none;
+}
+
+/* Custom Scrollbar */
+.wbdn-wrapper .table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.wbdn-wrapper .table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.wbdn-wrapper .table-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.wbdn-wrapper .table-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.wbdn-wrapper .form-field {
+    margin-bottom: 20px;
+}
+
+.wbdn-wrapper .form-field label {
+    display: block;
+    font-weight: 600;
+    color: #606060;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.wbdn-wrapper .form-field .checkbox-field-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.wbdn-wrapper .form-field .req-asterisk {
+    color: #dc3545;
+    margin: 0 4px;
+}
+
+/* Generic grid helpers for forms */
+.wbdn-wrapper .form-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.wbdn-wrapper .form-grid.two-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wbdn-wrapper .form-grid.three-col {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 1200px) {
+    .wbdn-wrapper .form-grid.three-col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wbdn-wrapper .form-grid,
+    .wbdn-wrapper .form-grid.two-col,
+    .wbdn-wrapper .form-grid.three-col {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ensure inputs in grid stretch */
+.wbdn-wrapper .form-grid .form-field input:not([type="checkbox"]),
+.wbdn-wrapper .form-grid .form-field select,
+.wbdn-wrapper .form-grid .form-field textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Select2 (SelectWoo) adjustments: hide rendered text, keep arrow */
+.wbdn-wrapper .select2-container .select2-selection--single .select2-selection__rendered {
+    display: none !important;
+}
+
+.wbdn-wrapper .select2-container .select2-selection--single {
+    min-height: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.wbdn-wrapper .select2-container .select2-selection--single .select2-selection__arrow {
+    height: 100%;
+}
+
+/* Neutralize default Select2 container focus/visuals inside wallet admin */
+/* keep layout but avoid unexpected shadows/outlines */
+.wbdn-wrapper .select2-container {
+    border: none;
+    display: none
+}
+
+.wbdn-wrapper .select2-container--default .select2-selection--single:focus,
+.wbdn-wrapper .select2-container--default .select2-selection--multiple:focus {
+    outline: none !important;
+}
+
+.wbdn-wrapper .select2-container--default.select2-container--focus .select2-selection--single,
+.wbdn-wrapper .select2-container--default.select2-container--focus .select2-selection--multiple {
+    box-shadow: none !important;
+    border-color: #D5D5D5 !important;
+}
+
+/* Also normalize hover state */
+.wbdn-wrapper .select2-container--default .select2-selection--single:hover,
+.wbdn-wrapper .select2-container--default .select2-selection--multiple:hover {
+    border-color: #D5D5D5 !important;
+    box-shadow: none !important;
+}
+
+.wbdn-wrapper select {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    color: #000;
+    border: 1px solid #D5D5D5;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background: #F5F6FA;
+    font-weight: 200;
+}
+
+.wbdn-wrapper input,
+.wbdn-wrapper textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    color: #000;
+    border: 1px solid #D5D5D5;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    background: #F5F6FA;
+    font-weight: 200;
+}
+
+.wbdn-wrapper input:focus,
+.wbdn-wrapper textarea:focus {
+    border-color: #c1c0c0;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.1);
+}
+
+.wbdn-wrapper textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Code Block Styles for Help Documentation */
+.wbdn-wrapper .code-block {
+    position: relative;
+    display: inline-block;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-family: 'Courier New', monospace;
+    direction: ltr;
+    text-align: left;
+    width: 95%;
+}
+
+.wbdn-wrapper .code-block code {
+    background: none;
+}
+
+.wbdn-wrapper .copy-btn {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background: #0073aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 28px;
+    font-family: 'Vazirmatn', sans-serif;
+    direction: rtl;
+}
+
+.wbdn-wrapper .copy-btn:hover {
+    background: #005a87;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.wbdn-wrapper .copy-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.wbdn-wrapper .copy-btn.copied {
+    background: #28a745;
+    transform: translateY(-50%);
+}
+
+.wbdn-wrapper .copy-btn.copied:hover {
+    background: #28a745;
+    transform: translateY(-50%);
+}

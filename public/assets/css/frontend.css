@@ -1,0 +1,415 @@
+/**
+ * InlineDoon Frontend Styles
+ */
+
+/* Main Container */
+.inlinedoon-container {
+    margin: 30px 0;
+    padding: 0;
+    position: relative;
+}
+
+.inlinedoon-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.inlinedoon-title {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.inlinedoon-view-all {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: #007cba;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.inlinedoon-view-all:hover {
+    background: #005a87;
+    color: white;
+    text-decoration: none;
+}
+
+.inlinedoon-arrow {
+    margin-right: 8px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.inlinedoon-view-all:hover .inlinedoon-arrow {
+    transform: translateX(-3px);
+}
+
+/* Slider Wrapper */
+.inlinedoon-slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Swiper Customization */
+.inlinedoon-container .swiper {
+    padding: 0;
+    margin: 0;
+}
+
+.inlinedoon-container .swiper-wrapper {
+    align-items: stretch;
+}
+
+.inlinedoon-container .swiper-slide {
+    height: auto;
+    display: flex;
+}
+
+/* Product Card */
+.inlinedoon-product-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inlinedoon-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.inlinedoon-product-card .woocommerce-loop-product__link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.inlinedoon-product-card .woocommerce-loop-product__link img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.inlinedoon-product-card:hover .woocommerce-loop-product__link img {
+    transform: scale(1.05);
+}
+
+/* Product Info */
+.inlinedoon-product-card .woocommerce-loop-product__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px 15px 10px 15px;
+    color: #333;
+    line-height: 1.4;
+    text-align: right;
+}
+
+.inlinedoon-product-card .price {
+    margin: 0 15px 15px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #007cba;
+    text-align: right;
+}
+
+.inlinedoon-product-card .price del {
+    color: #999;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.inlinedoon-product-card .price ins {
+    text-decoration: none;
+    color: #e74c3c;
+}
+
+/* Add to Cart Button */
+.inlinedoon-product-card .add_to_cart_button {
+    margin: 0 15px 15px 15px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: calc(100% - 30px);
+}
+
+.inlinedoon-product-card .add_to_cart_button:hover {
+    background: #218838;
+    color: white;
+    text-decoration: none;
+}
+
+.inlinedoon-product-card .add_to_cart_button.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Sale Badge */
+.inlinedoon-product-card .onsale {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Navigation Buttons */
+.inlinedoon-container .swiper-button-next,
+.inlinedoon-container .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    color: #333;
+    font-size: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-top: -20px;
+}
+
+.inlinedoon-container .swiper-button-next:hover,
+.inlinedoon-container .swiper-button-prev:hover {
+    background: #007cba;
+    color: white;
+    transform: scale(1.1);
+}
+
+.inlinedoon-container .swiper-button-next:after,
+.inlinedoon-container .swiper-button-prev:after {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Pagination */
+.inlinedoon-container .swiper-pagination {
+    position: relative;
+    margin-top: 20px;
+}
+
+.inlinedoon-container .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    opacity: 1;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.inlinedoon-container .swiper-pagination-bullet-active {
+    background: #007cba;
+    transform: scale(1.2);
+}
+
+/* No Products Message */
+.inlinedoon-no-products {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #dee2e6;
+}
+
+.inlinedoon-no-products p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+
+/* Featured Products Specific */
+.inlinedoon-featured .inlinedoon-product-card {
+    border: 2px solid #ffd700;
+}
+
+.inlinedoon-featured .inlinedoon-product-card::before {
+    content: "⭐";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    z-index: 2;
+}
+
+/* Sale Products Specific */
+.inlinedoon-sale .inlinedoon-product-card {
+    border: 2px solid #e74c3c;
+}
+
+.inlinedoon-sale .inlinedoon-product-card::before {
+    content: "🔥";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .inlinedoon-container .swiper {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inlinedoon-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .inlinedoon-title {
+        font-size: 20px;
+    }
+    
+    .inlinedoon-view-all {
+        align-self: flex-end;
+    }
+    
+    .inlinedoon-product-card .woocommerce-loop-product__link img {
+        height: 150px;
+    }
+    
+    .inlinedoon-product-card .woocommerce-loop-product__title {
+        font-size: 14px;
+        margin: 10px 10px 8px 10px;
+    }
+    
+    .inlinedoon-product-card .price {
+        font-size: 16px;
+        margin: 0 10px 10px 10px;
+    }
+    
+    .inlinedoon-product-card .add_to_cart_button {
+        margin: 0 10px 10px 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+        width: calc(100% - 20px);
+    }
+    
+    .inlinedoon-container .swiper-button-next,
+    .inlinedoon-container .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inlinedoon-container {
+        margin: 20px 0;
+    }
+    
+    .inlinedoon-header {
+        margin-bottom: 20px;
+    }
+    
+    .inlinedoon-title {
+        font-size: 18px;
+    }
+    
+    .inlinedoon-view-all {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .inlinedoon-product-card .woocommerce-loop-product__link img {
+        height: 120px;
+    }
+    
+    .inlinedoon-product-card .woocommerce-loop-product__title {
+        font-size: 13px;
+        margin: 8px 8px 6px 8px;
+    }
+    
+    .inlinedoon-product-card .price {
+        font-size: 14px;
+        margin: 0 8px 8px 8px;
+    }
+    
+    .inlinedoon-product-card .add_to_cart_button {
+        margin: 0 8px 8px 8px;
+        padding: 6px 12px;
+        font-size: 12px;
+        width: calc(100% - 16px);
+    }
+}
+
+/* RTL Support */
+.rtl .inlinedoon-title {
+    text-align: left;
+}
+
+.rtl .inlinedoon-product-card .woocommerce-loop-product__title {
+    text-align: left;
+}
+
+.rtl .inlinedoon-product-card .price {
+    text-align: left;
+}
+
+.rtl .inlinedoon-arrow {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.rtl .inlinedoon-view-all:hover .inlinedoon-arrow {
+    transform: translateX(3px);
+}
+
+/* Loading States */
+.inlinedoon-container.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.inlinedoon-container.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #007cba;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
