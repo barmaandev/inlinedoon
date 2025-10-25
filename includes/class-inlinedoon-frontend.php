@@ -77,38 +77,6 @@ class InlineDoon_Frontend
     public function register_shortcodes()
     {
         add_shortcode('inlinedoon', array($this, 'inlinedoon_product_slider_shortcode'));
-        add_shortcode('inlinedoon_debug', array($this, 'inlinedoon_debug_shortcode'));
-    }
-
-    public function inlinedoon_debug_shortcode($atts)
-    {
-        $slider_settings = get_option('inlinedoon_slider_settings', array());
-        $default_slider_settings = array(
-            'slides_per_view_mobile' => 1.9,
-            'slides_per_view_tablet' => 2,
-            'slides_per_view_desktop' => 6,
-            'space_between' => 5,
-            'autoplay_enabled' => 1,
-            'autoplay_delay' => 1500,
-            'loop_enabled' => 1,
-            'rtl_enabled' => 1,
-        );
-        $slider_settings = wp_parse_args($slider_settings, $default_slider_settings);
-
-        ob_start();
-?>
-        <div style="background: #f0f0f0; padding: 20px; margin: 20px 0; border: 1px solid #ccc;">
-            <h3>InlineDoon Debug Info</h3>
-            <p><strong>Scripts loaded:</strong> Check browser console</p>
-            <p><strong>Plugin URL:</strong> <?php echo INLINEDOON_PLUGIN_URL; ?></p>
-            <p><strong>Swiper JS URL:</strong> <a href="<?php echo esc_url(INLINEDOON_PLUGIN_URL . 'public/assets/js/swiper.js'); ?>" target="_blank"><?php echo esc_html(INLINEDOON_PLUGIN_URL . 'public/assets/js/swiper.js'); ?></a></p>
-            <p><strong>Frontend JS URL:</strong> <a href="<?php echo esc_url(INLINEDOON_PLUGIN_URL . 'public/assets/js/frontend.js'); ?>" target="_blank"><?php echo esc_html(INLINEDOON_PLUGIN_URL . 'public/assets/js/frontend.js'); ?></a></p>
-            <p><strong>Slider settings:</strong></p>
-            <pre><?php print_r($slider_settings); ?></pre>
-            <p><strong>Test shortcode:</strong> [inlinedoon cat=""]</p>
-        </div>
-    <?php
-        return ob_get_clean();
     }
 
     public function inlinedoon_product_slider_shortcode($atts)
