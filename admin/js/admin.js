@@ -1,5 +1,5 @@
 /**
- * Plugin Name Admin JavaScript
+ * InlineDoon Admin JavaScript
  */
 
 jQuery(document).ready(function($) {

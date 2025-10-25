@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name Frontend Class
+ * InlineDoon Frontend Class
  */
 
 if (!defined('ABSPATH')) {
