@@ -652,7 +652,7 @@ h1.wbdn-tab-wrapper {
 /* Code Block Styles for Help Documentation */
 .wbdn-wrapper .code-block {
     position: relative;
-    display: inline-block;
+    display: flex;
     background: #f8f9fa;
     border: 1px solid #e9ecef;
     border-radius: 6px;
@@ -661,7 +661,6 @@ h1.wbdn-tab-wrapper {
     font-family: 'Courier New', monospace;
     direction: ltr;
     text-align: left;
-    width: 95%;
 }
 
 .wbdn-wrapper .code-block code {
