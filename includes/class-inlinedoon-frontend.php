@@ -183,7 +183,6 @@ class InlineDoon_Frontend
                 <a href="<?php echo esc_url($final_link); ?>" class="btn-slider-link"
                     style="text-decoration:none; font-weight:600;">
                     <?php echo esc_html($link_text); ?>
-                    <span class="icon bwd-icon-simple-arrow"></span>
                 </a>
             </div>
 <?php endif;
