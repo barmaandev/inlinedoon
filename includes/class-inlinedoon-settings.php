@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Settings page for Plugin Name
+ * Settings page for InlineDoon
  */
 
 if (!defined('ABSPATH')) {
