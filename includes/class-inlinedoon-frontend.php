@@ -89,12 +89,14 @@ class InlineDoon_Frontend
         $atts = shortcode_atts(array(
             'cat' => '',
             'include' => '',
+            'exclude' => '',
             'link_text' => 'مشاهده همه',
             'link_url' => '', // لینک دلخواه اضافه شد
         ), $atts, 'product_slider');
 
         $category_slugs = array_filter(array_map('trim', explode(',', $atts['cat'])));
         $manual_ids = array_filter(array_map('intval', explode(',', $atts['include'])));
+        $exclude_ids = array_filter(array_map('intval', explode(',', $atts['exclude'])));
         $link_text = sanitize_text_field($atts['link_text']);
         $custom_link_url = esc_url($atts['link_url']); // secure link url
         $slider_id = 'product-slider-' . $instance;
@@ -120,7 +122,7 @@ class InlineDoon_Frontend
             'post_type' => 'product',
             'posts_per_page' => 12 - count($manual_products),
             'orderby' => 'rand',
-            'post__not_in' => $manual_ids,
+            'post__not_in' => array_merge($manual_ids, $exclude_ids),
             'tax_query' => !empty($category_slugs) ? [
                 [
                     'taxonomy' => 'product_cat',
