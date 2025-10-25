@@ -90,6 +90,7 @@ class InlineDoon_Frontend
             'cat' => '',
             'include' => '',
             'exclude' => '',
+            'instock' => '',
             'link_text' => 'مشاهده همه',
             'link_url' => '', // لینک دلخواه اضافه شد
         ), $atts, 'product_slider');
@@ -99,6 +100,17 @@ class InlineDoon_Frontend
         $exclude_ids = array_filter(array_map('intval', explode(',', $atts['exclude'])));
         $link_text = sanitize_text_field($atts['link_text']);
         $custom_link_url = esc_url($atts['link_url']); // secure link url
+        
+        // Handle instock filtering - shortcode attr has priority over setting
+        $instock_shortcode = $atts['instock'];
+        $instock_setting = get_option('inlinedoon_instock_default', 'all'); // 'all' or 'instock'
+        
+        // Determine final instock filter
+        if ($instock_shortcode !== '') {
+            $show_instock_only = ($instock_shortcode === 'true' || $instock_shortcode === '1' || $instock_shortcode === 'yes');
+        } else {
+            $show_instock_only = ($instock_setting === 'instock');
+        }
         $slider_id = 'product-slider-' . $instance;
 
         // Get the first category for the link (or use custom link)
@@ -118,6 +130,16 @@ class InlineDoon_Frontend
             $manual_products = $manual_products_query->posts;
         }
 
+        // Build meta query based on instock filtering
+        $meta_query = [];
+        if ($show_instock_only) {
+            $meta_query[] = [
+                'key' => '_stock_status',
+                'value' => 'instock',
+                'compare' => '=',
+            ];
+        }
+
         $random_products_query = new WP_Query([
             'post_type' => 'product',
             'posts_per_page' => 12 - count($manual_products),
@@ -131,13 +153,7 @@ class InlineDoon_Frontend
                     'operator' => 'IN',
                 ],
             ] : [],
-            'meta_query' => [
-                [
-                    'key' => '_stock_status',
-                    'value' => 'instock',
-                    'compare' => '=',
-                ]
-            ],
+            'meta_query' => $meta_query,
         ]);
 
         $random_products = $random_products_query->posts;

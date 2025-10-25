@@ -71,6 +71,10 @@ class InlineDoon_Settings
             );
 
             update_option('inlinedoon_slider_settings', $slider_settings, false);
+            
+            // Save instock default setting
+            $instock_default = isset($_POST['instock_default']) ? sanitize_text_field($_POST['instock_default']) : 'all';
+            update_option('inlinedoon_instock_default', $instock_default, false);
         }
 
         wp_safe_redirect(add_query_arg(array('page' => 'inlinedoon-admin-settings', 'updated' => 'true'), admin_url('admin.php')));
@@ -236,6 +240,16 @@ class InlineDoon_Settings
                             <input type="checkbox" name="rtl_enabled" value="1"
                                 <?php checked($slider_settings['rtl_enabled'], 1); ?> />
                             فعال کردن راست به چپ (RTL)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                <div class="checkbox-field-wrapper">
+                    <label>
+                        <input type="checkbox" name="instock_default" value="1"
+                            <?php checked(get_option('inlinedoon_instock_default', 'all'), 'instock'); ?> />
+                        فعال کردن فیلتر محصولات موجود
                         </label>
                     </div>
                 </div>

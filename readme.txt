@@ -1,6 +1,6 @@
-=== bargardoon Wallet ===
+=== InlineDoon Product Slider ===
 Contributors: Barmaan shokoohi
-Tags: 
+Tags: woocommerce, product, slider, shortcode
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 7.4
@@ -8,16 +8,21 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-نام پلاگین
+نمایش محصولات ووکامرس در قالب اسلایدر
 
 == Description ==
 
-توضیحات پلاگین 
-
+پلاگین این‌لاین دون ابزاری قدرتمند برای نمایش محصولات ووکامرس در قالب اسلایدر است. این پلاگین به شما امکان نمایش محصولات را در هر جای سایت با استفاده از شورت‌کد می‌دهد.
 
 == Features ==
 
-* شارژ کیف پول با درگاه‌های پرداخت SEP و زرین‌پال
+* نمایش محصولات ووکامرس در قالب اسلایدر
+* پشتیبانی از دسته‌بندی‌های محصولات
+* امکان انتخاب محصولات خاص
+* فیلتر محصولات موجود/ناموجود
+* تنظیمات پیشرفته اسلایدر
+* پشتیبانی از RTL
+* رابط کاربری فارسی
 
 
 == Installation ==
@@ -30,7 +35,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 شورت‌کدهای موجود:
 
-* `[shortcode_name]` - عملکرد پلاگین
+* `[inlinedoon]` - نمایش اسلایدر محصولات
+* `[inlinedoon cat="electronics"]` - نمایش محصولات دسته‌بندی خاص
+* `[inlinedoon include="123,456"]` - نمایش محصولات خاص
+* `[inlinedoon exclude="789"]` - حذف محصولات خاص
+* `[inlinedoon instock="true"]` - فقط محصولات موجود
+* `[inlinedoon cat="electronics" instock="true" exclude="123"]` - ترکیب پارامترها
 
 == Changelog ==
 

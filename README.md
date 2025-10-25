@@ -13,6 +13,8 @@ A powerful WordPress plugin for displaying WooCommerce products in beautiful, re
 - **📱 Fully Responsive** - Optimized for mobile, tablet, and desktop
 - **⚙️ Highly Customizable** - Control slides, autoplay, spacing, and more
 - **🔄 Smart Product Selection** - Mix specific products with random category products
+- **🚫 Product Exclusion** - Exclude specific products from display
+- **📦 Stock Filtering** - Show only in-stock products or all products
 - **🌍 RTL Support** - Perfect for Persian/Arabic websites
 - **🎨 Beautiful Design** - Clean, modern slider interface
 - **⚡ Fast Performance** - Lightweight and optimized code
@@ -55,6 +57,8 @@ A powerful WordPress plugin for displaying WooCommerce products in beautiful, re
 |-----------|-------------|---------|
 | `cat` | Product category slug | `cat="electronics"` |
 | `include` | Specific product IDs (comma-separated) | `include="123,456,789"` |
+| `exclude` | Product IDs to exclude (comma-separated) | `exclude="123,456"` |
+| `instock` | Filter for in-stock products (true/false) | `instock="true"` |
 | `link_text` | Custom "View All" link text | `link_text="Shop Now"` |
 | `link_url` | Custom link URL | `link_url="https://example.com"` |
 
@@ -75,9 +79,19 @@ A powerful WordPress plugin for displaying WooCommerce products in beautiful, re
 [inlinedoon cat="books" link_text="Browse All Books" link_url="https://example.com/books"]
 ```
 
+### Exclude Specific Products
+```
+[inlinedoon cat="electronics" exclude="123,456"]
+```
+
+### Show Only In-Stock Products
+```
+[inlinedoon cat="electronics" instock="true"]
+```
+
 ### Combined Parameters
 ```
-[inlinedoon cat="clothing" include="100,200" link_text="Shop Collection"]
+[inlinedoon cat="clothing" include="100,200" exclude="300" instock="true" link_text="Shop Collection"]
 ```
 
 ## ⚙️ Settings
@@ -93,6 +107,7 @@ Access the settings from **InlineDoon > Settings** in your WordPress admin:
 - **Autoplay Delay**: Time each slide is displayed
 - **Loop**: Enable/disable continuous loop
 - **RTL**: Enable/disable right-to-left direction
+- **Stock Filter**: Default setting for showing only in-stock products
 
 ### Access Control
 - Configure which user roles can access the plugin admin
@@ -292,8 +307,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📞 پشتیبانی
 
 - **وب‌سایت**: [webdoon.ir](https://webdoon.ir)
-- **نویسنده**: Barmaan Shokoohi
-- **نسخه**: 1.0.0
+- **نویسنده**: بارمان شکوهی
+- **نسخه**: 1.0.1
 
 ## 📄 مجوز
 
@@ -304,6 +319,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 مشارکت‌ها خوشامد است! لطفاً Pull Request ارسال کنید.
 
 ## 📝 تغییرات
+
+### نسخه 1.0.1
+- اضافه شدن پارامتر `exclude` برای حذف محصولات خاص
+- اضافه شدن پارامتر `instock` برای فیلتر محصولات موجود
+- تنظیمات پیش‌فرض فیلتر موجودی در پنل مدیریت
+- بهبود مستندات و راهنمای استفاده
+- رفع مشکلات جزئی
 
 ### نسخه 1.0.0
 - انتشار اولیه

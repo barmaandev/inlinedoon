@@ -52,6 +52,16 @@ if (!defined('ABSPATH')) {
                     <td>آدرس لینک دلخواه</td>
                     <td><code>link_url="https://example.com"</code></td>
                 </tr>
+                <tr>
+                    <td><code>exclude</code></td>
+                    <td>شناسه‌های محصولات برای حذف (جدا شده با کاما)</td>
+                    <td><code>exclude="123,456"</code></td>
+                </tr>
+                <tr>
+                    <td><code>instock</code></td>
+                    <td>فیلتر محصولات موجود (true/false)</td>
+                    <td><code>instock="true"</code></td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -61,6 +71,19 @@ if (!defined('ABSPATH')) {
     <p>
         اگر آدرس دلخواه وارد نشود، به صورت خودکار لینکِ صفحه اسلاگ وارد شده انتخاب میشود
     </p>
+    <p>
+        <strong>نکته:</strong> پارامتر <code>instock</code> در شورت‌کد اولویت دارد و تنظیمات پیش‌فرض در پنل مدیریت را نادیده می‌گیرد.
+    </p>
+</div>
+
+<div class="wbdn-section-box">
+    <h3>تنظیمات پیش‌فرض</h3>
+    <p>در بخش "تنظیمات اسلایدر" می‌توانید تنظیمات پیش‌فرض زیر را انجام دهید:</p>
+    <ul>
+        <li><strong>فیلتر محصولات موجود:</strong> تعیین کنید که به صورت پیش‌فرض فقط محصولات موجود نمایش داده شوند یا همه محصولات</li>
+        <li><strong>تنظیمات اسلایدر:</strong> تعداد اسلایدها در دستگاه‌های مختلف، فاصله بین اسلایدها، و سایر تنظیمات</li>
+        <li><strong>دسترسی:</strong> تعیین کنید چه نقش‌هایی به پنل مدیریت دسترسی داشته باشند</li>
+    </ul>
 </div>
 
 <div class="wbdn-section-box">
@@ -90,10 +113,26 @@ if (!defined('ABSPATH')) {
         </button>
     </div>
 
+    <h4>حذف محصولات خاص:</h4>
+    <div class="code-block">
+        <code>[inlinedoon cat="electronics" exclude="123,456"]</code>
+        <button class="copy-btn" data-copy-text="[inlinedoon cat=&quot;electronics&quot; exclude=&quot;123,456&quot;]" title="کپی کردن">
+            کپی
+        </button>
+    </div>
+
+    <h4>فقط محصولات موجود:</h4>
+    <div class="code-block">
+        <code>[inlinedoon cat="electronics" instock="true"]</code>
+        <button class="copy-btn" data-copy-text="[inlinedoon cat=&quot;electronics&quot; instock=&quot;true&quot;]" title="کپی کردن">
+            کپی
+        </button>
+    </div>
+
     <h4>ترکیب پارامترها:</h4>
     <div class="code-block">
-        <code>[inlinedoon cat="clothing" include="100,200" link_text="خرید از فروشگاه"]</code>
-        <button class="copy-btn" data-copy-text="[inlinedoon cat=&quot;clothing&quot; include=&quot;100,200&quot; link_text=&quot;خرید از فروشگاه&quot;]" title="کپی کردن">
+        <code>[inlinedoon cat="clothing" include="100,200" exclude="300" instock="true" link_text="خرید از فروشگاه"]</code>
+        <button class="copy-btn" data-copy-text="[inlinedoon cat=&quot;clothing&quot; include=&quot;100,200&quot; exclude=&quot;300&quot; instock=&quot;true&quot; link_text=&quot;خرید از فروشگاه&quot;]" title="کپی کردن">
             کپی
         </button>
     </div>
@@ -128,12 +167,12 @@ if (!defined('ABSPATH')) {
     <p>برای گزارش مشکلات یا ارائه ایده از روش‌های زیر اقدام کنید:</p>
     <ul>
         <li>وب‌سایت: <a href="https://webdoon.ir" target="_blank">webdoon.ir</a></li>
-        <li>نویسنده: Barmaan Shokoohi</li>
+        <li>نویسنده: بارمان شکوهی</li>
     </ul>
 </div>
 
 <div class="wbdn-section-box">
     <h3>نسخه</h3>
-    <p>نسخه فعلی: 1.0.0</p>
+    <p>نسخه فعلی: 1.0.1</p>
 </div>
 
