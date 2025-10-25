@@ -8,14 +8,15 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
     exit;
 }
 
-// Include installation class
-require_once plugin_dir_path(__FILE__) . 'database/install.php';
-
 // Remove database tables and options
-InlineDoon_Install::uninstall();
+global $wpdb;
+
+// Remove plugin options
+delete_option('inlinedoon_settings');
+delete_option('inlinedoon_version');
 
 // Remove user meta data
-global $wpdb;
+$wpdb->query("DELETE FROM {$wpdb->usermeta} WHERE meta_key LIKE 'inlinedoon_%'");
 
 
 // Clear any cached data
