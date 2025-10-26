@@ -166,18 +166,6 @@ class InlineDoon_Frontend
         global $post;
         $original_post = $post;
     ?>
-        <?php if (!empty($products)): ?>
-            <div class="slider-products-list">
-                <ul>
-                    <?php foreach ($products as $product_post): ?>
-                        <?php
-                        $product = wc_get_product($product_post->ID);
-                        ?>
-                        <li><?php echo esc_html($product->get_name()); ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            </div>
-        <?php endif; ?>
         <div class="swiper <?php echo esc_attr($slider_id); ?>" data-inlinedoon-slider="true" data-product-count="<?php echo count($products); ?>">
             <div class="swiper-wrapper">
                 <?php foreach ($products as $product_post): ?>
